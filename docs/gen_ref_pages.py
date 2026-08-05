@@ -6,6 +6,7 @@ Enforces custom navigation ordering at every tree level:
 """
 
 from pathlib import Path
+
 import mkdocs_gen_files
 
 # Human-readable title mapping for packages and modules in navigation tree

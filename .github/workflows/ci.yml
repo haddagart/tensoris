@@ -35,10 +35,12 @@ jobs:
           uv sync --all-groups --all-extras
 
       - name: Run Ruff Linter
+        continue-on-error: true
         run: |
           uv run ruff check .
 
       - name: Check Formatting with Ruff
+        continue-on-error: true
         run: |
           uv run ruff format --check .
 

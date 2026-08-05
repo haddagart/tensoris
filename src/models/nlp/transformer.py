@@ -2,6 +2,7 @@
 
 import torch
 import torch.nn as nn
+
 from src.backend.components.blocks.nlp import TransformerEncoderBlock
 from src.backend.components.layers.nlp import PositionalEncoding
 

@@ -2,6 +2,7 @@
 
 import torch
 import torch.nn as nn
+
 from src.backend.components.blocks.genai import VAEDecoderBlock, VAEEncoderBlock
 
 

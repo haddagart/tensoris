@@ -1,6 +1,5 @@
 """Weights & Biases (W&B) Experiment Tracking Integration."""
 
-import os
 from typing import Any
 
 try:
