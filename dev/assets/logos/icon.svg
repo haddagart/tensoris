@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="icon-grad-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8" />
+      <stop offset="50%" stop-color="#C084FC" />
+      <stop offset="100%" stop-color="#F472B6" />
+    </linearGradient>
+    <linearGradient id="icon-grad-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+    <filter id="icon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Neutral Dark Badge Background -->
+  <rect x="5" y="5" width="90" height="90" rx="22" fill="#1E1B4B" stroke="#FFFFFF" stroke-width="2" />
+
+  <!-- High-Contrast Emblem Mesh -->
+  <g transform="translate(10, 10)">
+    <path d="M 40 15 L 70 35 L 55 75 L 25 75 L 10 35 Z" fill="none" stroke="url(#icon-grad-primary)" stroke-width="2.8" stroke-opacity="0.85" />
+    <path d="M 40 15 L 55 75 M 70 35 L 25 75 M 10 35 L 55 75" fill="none" stroke="url(#icon-grad-cyan)" stroke-width="2.2" stroke-opacity="0.9" />
+    <path d="M 40 42 L 40 15 M 40 42 L 70 35 M 40 42 L 55 75 M 40 42 L 25 75 M 40 42 L 10 35" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.95" />
+
+    <!-- High-Visibility Nodes -->
+    <circle cx="40" cy="15" r="5.5" fill="#818CF8" filter="url(#icon-glow)" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="70" cy="35" r="5.5" fill="#C084FC" filter="url(#icon-glow)" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="55" cy="75" r="5.5" fill="#F472B6" filter="url(#icon-glow)" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="25" cy="75" r="5.5" fill="#38BDF8" filter="url(#icon-glow)" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="10" cy="35" r="5.5" fill="#60A5FA" filter="url(#icon-glow)" stroke="#FFFFFF" stroke-width="1.2" />
+    <circle cx="40" cy="42" r="6.5" fill="#FB7185" filter="url(#icon-glow)" stroke="#FFFFFF" stroke-width="1.5" />
+  </g>
+</svg>
