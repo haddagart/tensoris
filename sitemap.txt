@@ -1,0 +1,37 @@
+- Home:
+    - Welcome
+    - TL;DR (README.md symbolic link)
+    - Ackowledgments
+- Get Started:
+    - Requirements
+    - File Tree
+    - Workflows
+    - Integrations
+    - Agent Skills
+    - Benchmarks
+    - FAQ
+- For Academics:
+    - Cite this project
+    - References
+    - Ethics and Deontology
+- For Coders:
+    - Description [sidebar group]
+        - Conventions
+        - License
+    - Changelog [sidebar group]
+        - Changelog
+        - Versioning
+    - Contributing [sidebar group]
+        - Contributing
+        - Code of Conduct
+        - Making a pull request
+        - Reporting a bug
+        - Requesting a docs issue
+        - Requesting a change
+        - Creating a reproduction
+        - Asking a question
+        - Adding translations
+- API Reference (auto-generated from `src`)
+- Tutorials (replace blog)
+- Honorable mentions
+- Supported Causes

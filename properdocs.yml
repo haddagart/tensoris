@@ -1,0 +1,180 @@
+site_name: Deep Learning Boilerplate Documentation
+site_description: Production-Grade Academic-First PyTorch Project Template Documentation
+site_url: https://haddagart.github.io/haddag-dl-template-2/
+dev_addr: 127.0.0.1:8942
+
+repo_name: haddagart/haddag-dl-template-2
+repo_url: https://github.com/haddagart/haddag-dl-template-2
+
+copyright: >
+  Copyright &copy; 2026 <a href="https://github.com/haddagart" target="_blank">Abdelkader Haddag</a>.
+
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/solid/mug-hot
+      link: https://buymeacoffee.com/mk766p2kyje
+      name: Buy Me A Coffee (Haddag A.)
+    - icon: fontawesome/brands/github
+      link: https://github.com/haddagart
+      name: GitHub (haddagart)
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/haddagart/
+      name: LinkedIn (haddagart)
+    - icon: fontawesome/brands/twitter
+      link: https://x.com/haddagart
+      name: X / Twitter (haddagart)
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: materialx
+  logo: assets/logos/logo_header.svg
+  favicon: assets/logos/icon.svg
+  icon:
+    logo: material/cube-outline
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - navigation.top
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.code.select
+    - content.action.edit
+
+plugins:
+  - search
+  - gen-files:
+      scripts:
+        - docs/gen_ref_pages.py
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_style: google
+            show_root_heading: true
+            show_source: true
+            show_category_heading: true
+            separate_signature: true
+  - git-revision-date-localized:
+      type: timeago
+      enable_creation_date: true
+      fallback_to_build_date: true
+      enable_git_follow: false
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: haddagart
+      repo: haddag-dl-template-2
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+nav:
+  - Home:
+      - Welcome: index.md
+      - TL;DR: tldr.md
+      - Acknowledgements: acknowledgements.md
+  - Get Started:
+      - Requirements: requirements.md
+      - File Tree: file-tree.md
+      - Workflows: workflow-scripts.md
+      - Integrations: integrations.md
+      - Agent Skills: agent-skills.md
+      - Benchmarks: benchmarks.md
+      - FAQ: faq.md
+  - For Academics:
+      - Cite this project: citation-contact.md
+      - References: academics/references.md
+      - Ethics and Deontology: academics/ethics-deontology.md
+  - For Coders:
+      - Description:
+          - Conventions: coders/conventions.md
+          - License: coders/license.md
+      - Changelog:
+          - Changelog: coders/changelog.md
+          - Versioning: versioning.md
+      - Contributing:
+          - Contributing: contributing.md
+          - Code of Conduct: community.md
+          - Making a Pull Request: coders/pull-request.md
+          - Reporting a Bug: coders/bug-report.md
+          - Requesting a Docs Issue: coders/docs-issue.md
+          - Requesting a Change: coders/feature-request.md
+          - Creating a Reproduction: coders/reproduction.md
+          - Asking a Question: coders/asking-question.md
+          - Adding Translations: coders/translations.md
+  - API Reference: api/
+  - Tutorials:
+      - Overview: tutorials/index.md
+      - Quickstart Pipeline: tutorials/quickstart-pipeline.md
+      - Custom Blocks & Losses: tutorials/custom-blocks-losses.md
+      - Platform Integrations: tutorials/platform-integrations.md
+      - GPU Docker Development: tutorials/gpu-docker.md
+  - Honorable Mentions: honorable-mentions.md
+  - Supported Causes: causes.md

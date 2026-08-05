@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
+  <defs>
+    <!-- Vibrant Gradients (High Contrast on Light & Dark) -->
+    <linearGradient id="brand-grad-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="50%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#DB2777" />
+    </linearGradient>
+    <linearGradient id="brand-grad-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#4F46E5" />
+    </linearGradient>
+    
+    <!-- Universal Contrast Drop Shadow -->
+    <filter id="universal-contrast" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- High-Contrast Vector Prism Emblem -->
+  <g transform="translate(10, 10)">
+    <!-- Connection Lines -->
+    <path d="M 40 15 L 70 35 L 55 75 L 25 75 L 10 35 Z" fill="none" stroke="url(#brand-grad-primary)" stroke-width="3" stroke-opacity="0.9" />
+    <path d="M 40 15 L 55 75 M 70 35 L 25 75 M 10 35 L 55 75" fill="none" stroke="url(#brand-grad-cyan)" stroke-width="2.2" stroke-opacity="0.9" />
+    <path d="M 40 42 L 40 15 M 40 42 L 70 35 M 40 42 L 55 75 M 40 42 L 25 75 M 40 42 L 10 35" fill="none" stroke="#6366F1" stroke-width="2" stroke-opacity="0.75" />
+
+    <!-- Nodes with High Visibility -->
+    <circle cx="40" cy="15" r="5.5" fill="#4F46E5" filter="url(#universal-contrast)" stroke="#FFFFFF" stroke-width="1.5" />
+    <circle cx="70" cy="35" r="5.5" fill="#7C3AED" filter="url(#universal-contrast)" stroke="#FFFFFF" stroke-width="1.5" />
+    <circle cx="55" cy="75" r="5.5" fill="#DB2777" filter="url(#universal-contrast)" stroke="#FFFFFF" stroke-width="1.5" />
+    <circle cx="25" cy="75" r="5.5" fill="#0284C7" filter="url(#universal-contrast)" stroke="#FFFFFF" stroke-width="1.5" />
+    <circle cx="10" cy="35" r="5.5" fill="#2563EB" filter="url(#universal-contrast)" stroke="#FFFFFF" stroke-width="1.5" />
+    <circle cx="40" cy="42" r="6.5" fill="#E11D48" filter="url(#universal-contrast)" stroke="#FFFFFF" stroke-width="1.8" />
+  </g>
+
+  <!-- Universal Dual-Contrast Typography -->
+  <text x="100" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="34" letter-spacing="1" fill="url(#brand-grad-primary)" filter="url(#universal-contrast)">
+    DL
+  </text>
+  <text x="155" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="22" letter-spacing="0.5" fill="#475569" filter="url(#universal-contrast)">
+    TEMPLATE
+  </text>
+  <text x="101" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="600" font-size="11" letter-spacing="3" fill="#64748B" filter="url(#universal-contrast)">
+    DEEP LEARNING BOILERPLATE
+  </text>
+</svg>

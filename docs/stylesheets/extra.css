@@ -1,0 +1,17 @@
+/* Automatically switch sidebar and header logos opposite to theme (Light vs Dark) */
+
+/* Light Mode (default theme): Plain dark logo for high contrast on light header/sidebar */
+[data-md-color-scheme="default"] .md-header__button.md-logo img,
+[data-md-color-scheme="default"] .md-nav__title .md-logo img,
+[data-md-color-scheme="default"] .md-sidebar .md-logo img {
+  content: url("../assets/logos/logo.svg");
+  filter: brightness(0.15) contrast(1.2);
+}
+
+/* Dark Mode (slate theme): Plain all-white logo for high contrast on dark header/sidebar */
+[data-md-color-scheme="slate"] .md-header__button.md-logo img,
+[data-md-color-scheme="slate"] .md-nav__title .md-logo img,
+[data-md-color-scheme="slate"] .md-sidebar .md-logo img {
+  content: url("../assets/logos/logo_header.svg");
+  filter: brightness(0) invert(1);
+}

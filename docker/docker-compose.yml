@@ -1,0 +1,67 @@
+services:
+  # Primary hot-reloading development and training service
+  dev:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: dl_template_dev
+    working_dir: /app
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/app
+    # Volume mounts enable external control & hot-reloading without rebuilding images
+    volumes:
+      - ../src:/app/src:rw                # Hot-reload source code changes instantly
+      - ../scripts:/app/scripts:rw        # Hot-reload workflow script changes
+      - ../inputs:/app/inputs:rw          # Host dataset and checkpoint input directory
+      - ../outputs:/app/outputs:rw        # Generated checkpoints and artifacts output to host
+      - ../logs:/app/logs:rw              # Training logs and TensorBoard metrics output to host
+      - ../notebooks:/app/notebooks:rw    # Interactive notebooks directory
+      - ../docs:/app/docs:rw              # Documentation source files
+      - ../pyproject.toml:/app/pyproject.toml:ro
+    ports:
+      - "8888:8888" # Jupyter / Marimo
+      - "6006:6006" # TensorBoard
+      - "8942:8942" # MkDocs documentation server
+    stdin_open: true
+    tty: true
+    # GPU Access configuration
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: python scripts/train.py
+
+  # Live ProperDocs documentation server service
+  docs:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: dl_template_docs
+    working_dir: /app
+    volumes:
+      - ../docs:/app/docs:rw
+      - ../src:/app/src:rw
+      - ../properdocs.yml:/app/properdocs.yml:ro
+    ports:
+      - "8942:8942"
+    command: uv run properdocs serve --dev-addr 0.0.0.0:8942
+
+  # Interactive Marimo / Jupyter notebook service
+  notebook:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: dl_template_notebook
+    working_dir: /app
+    volumes:
+      - ../notebooks:/app/notebooks:rw
+      - ../src:/app/src:rw
+      - ../inputs:/app/inputs:rw
+      - ../outputs:/app/outputs:rw
+    ports:
+      - "8888:8888"
+    command: uv run marimo edit notebooks/marimo/ --host 0.0.0.0 --port 8888 --no-token

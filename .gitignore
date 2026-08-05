@@ -1,0 +1,52 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments & Environment Secrets
+.venv
+.env
+.env.*
+*.env
+
+# Data, Weights, and Logs
+inputs/datasets/**
+!inputs/datasets/
+!inputs/datasets/**/.gitkeep
+
+inputs/backbones/**
+!inputs/backbones/
+!inputs/backbones/**/.gitkeep
+
+outputs/**
+!outputs/
+!outputs/**/.gitkeep
+
+logs/**
+!logs/
+!logs/**/.gitkeep
+
+temp/**
+!temp/
+!temp/**/.gitkeep
+
+# Documentation site build output
+site/
+
+# Tooling and Test Caches
+.cache/
+.uv_cache/
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS files
+.DS_Store
+*.swp
+
+
