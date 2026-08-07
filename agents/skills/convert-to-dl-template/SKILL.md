@@ -5,7 +5,7 @@ description: Converts an existing Python or Deep Learning codebase to strictly a
 
 # Convert Codebase to Deep Learning Boilerplate Structure
 
-This skill provides step-by-step instructions for converting any existing Python/Deep Learning codebase into the modular **Deep Learning Project Boilerplate** (`haddag-dl-template-2` architecture).
+This skill provides step-by-step instructions for converting any existing Python/Deep Learning codebase into the modular **Deep Learning Project Boilerplate** (`tensoris` architecture).
 
 ---
 

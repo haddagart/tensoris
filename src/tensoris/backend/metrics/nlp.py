@@ -26,14 +26,20 @@ class PerplexityMetric:
         self.total_loss = 0.0
         self.total_count = 0
 
-    def update(self, cross_entropy_loss: torch.Tensor | float, token_count: int) -> None:
+    def update(
+        self, cross_entropy_loss: torch.Tensor | float, token_count: int
+    ) -> None:
         """Accumulate token cross-entropy loss.
 
         Args:
             cross_entropy_loss: Average batch cross-entropy loss.
             token_count: Number of active non-padding tokens in batch.
         """
-        loss_val = cross_entropy_loss.item() if hasattr(cross_entropy_loss, "item") else float(cross_entropy_loss)
+        loss_val = (
+            cross_entropy_loss.item()
+            if hasattr(cross_entropy_loss, "item")
+            else float(cross_entropy_loss)
+        )
         self.total_loss += loss_val * token_count
         self.total_count += token_count
 

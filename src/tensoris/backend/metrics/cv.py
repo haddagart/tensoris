@@ -29,7 +29,9 @@ class MeanIoU:
 
     def reset(self) -> None:
         """Reset confusion matrix counts."""
-        self.confusion_matrix = torch.zeros((self.num_classes, self.num_classes), dtype=torch.int64)
+        self.confusion_matrix = torch.zeros(
+            (self.num_classes, self.num_classes), dtype=torch.int64
+        )
 
     def update(self, predictions: torch.Tensor, targets: torch.Tensor) -> None:
         """Accumulate confusion matrix for predictions vs targets.

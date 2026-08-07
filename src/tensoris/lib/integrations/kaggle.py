@@ -5,6 +5,7 @@ from pathlib import Path
 
 try:
     import kaggle  # type: ignore
+
     _KAGGLE_AVAILABLE = True
 except (ImportError, Exception):  # pragma: no cover
     _KAGGLE_AVAILABLE = False
@@ -35,7 +36,9 @@ class KaggleIntegration:
         """Check if Kaggle library is installed and authenticated."""
         return _KAGGLE_AVAILABLE
 
-    def download_dataset(self, dataset_handle: str, output_dir: str | Path = "inputs/datasets") -> Path:
+    def download_dataset(
+        self, dataset_handle: str, output_dir: str | Path = "inputs/datasets"
+    ) -> Path:
         """Download and unzip a Kaggle dataset.
 
         Args:
@@ -52,10 +55,14 @@ class KaggleIntegration:
             )
         output_path = Path(output_dir)
         output_path.mkdir(parents=True, exist_ok=True)
-        kaggle.api.dataset_download_files(dataset_handle, path=str(output_path), unzip=True)
+        kaggle.api.dataset_download_files(
+            dataset_handle, path=str(output_path), unzip=True
+        )
         return output_path
 
-    def submit_competition(self, file_path: str | Path, competition: str, message: str) -> None:
+    def submit_competition(
+        self, file_path: str | Path, competition: str, message: str
+    ) -> None:
         """Submit a prediction CSV file to a Kaggle competition.
 
         Args:
@@ -65,4 +72,6 @@ class KaggleIntegration:
         """
         if not self.is_available:
             raise RuntimeError("Kaggle package is not available.")
-        kaggle.api.competition_submit(str(file_path), message=message, competition=competition)
+        kaggle.api.competition_submit(
+            str(file_path), message=message, competition=competition
+        )

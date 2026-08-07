@@ -31,7 +31,7 @@ from src.lib.integrations.wandb import WandbIntegration
 wandb_logger = WandbIntegration(
     project="deep-learning-boilerplate",
     name="experiment_resnet_v1",
-    config={"learning_rate": 0.001, "batch_size": 64}
+    config={"learning_rate": 0.001, "batch_size": 64},
 )
 
 # Log training step metrics
@@ -41,7 +41,7 @@ wandb_logger.log_metrics({"train/loss": 0.245, "val/accuracy": 0.942}, step=epoc
 wandb_logger.log_artifact(
     name="model-checkpoint",
     type_name="model",
-    filepath="outputs/checkpoints/best_model.pt"
+    filepath="outputs/checkpoints/best_model.pt",
 )
 wandb_logger.finish()
 ```
@@ -60,7 +60,7 @@ hf_helper = HuggingFaceIntegration(repo_id="your-username/my-resnet-model")
 # Upload model checkpoint
 hf_helper.upload_model(
     checkpoint_path="outputs/checkpoints/best_model.pt",
-    commit_message="Upload trained ResNet baseline checkpoint"
+    commit_message="Upload trained ResNet baseline checkpoint",
 )
 ```
 
@@ -84,6 +84,6 @@ rf.download_dataset(
     workspace="vision-research",
     project="object-detection-v1",
     version=1,
-    output_dir="inputs/datasets/roboflow_dataset"
+    output_dir="inputs/datasets/roboflow_dataset",
 )
 ```

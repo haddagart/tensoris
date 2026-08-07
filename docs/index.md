@@ -3,16 +3,15 @@ icon: material/home
 ---
 
 <div align="center">
-  <img src="assets/logos/logo.svg" alt="Deep Learning Boilerplate Logo" width="420" />
-  <p><strong>A Production-Grade, Academic-First PyTorch Project Template & Architecture Boilerplate</strong></p>
+  <img src="assets/logos/logo.svg" alt="Tensoris Logo" width="420" />
+  <p><strong>A Production-Grade, Academic-First PyTorch Framework & Architecture Library</strong></p>
   
   <p>
-    <a href="https://github.com/haddagart/haddag-dl-template-2"><img src="https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github" alt="GitHub Repo" /></a>
+    <a href="https://github.com/haddagart/tensoris"><img src="https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github" alt="GitHub Repo" /></a>
+    <a href="https://pypi.org/project/tensoris/"><img src="https://img.shields.io/pypi/v/tensoris?style=flat-square" alt="PyPI" /></a>
     <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.0+-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" /></a>
     <a href="https://astral.sh/uv"><img src="https://img.shields.io/badge/Package%20Manager-uv-261230?style=flat-square" alt="uv" /></a>
     <a href="https://docker.com"><img src="https://img.shields.io/badge/Container-Docker%20GPU-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" /></a>
-    <a href="https://scholar.google.com/citations?user=rSpkNpYAAAAJ"><img src="https://img.shields.io/badge/Academic-Google%20Scholar-4285F4?style=flat-square&logo=google-scholar" alt="Google Scholar" /></a>
-    <a href="https://buymeacoffee.com/mk766p2kyje"><img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Haddag%20A.-FFDD00?style=flat-square&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee" /></a>
   </p>
 </div>
 
@@ -20,7 +19,7 @@ icon: material/home
 
 ## 🌟 Executive Summary
 
-The **Deep Learning Boilerplate Template** (`haddag-dl-template-2`) is a standardized, high-performance architecture framework tailored for AI researchers, scientific engineers, and deep learning practitioners. It bridges the gap between theoretical peer-reviewed research papers and production-ready PyTorch implementations by enforcing strict modularity, automated API documentation, Docker GPU reproducibility, and domain-grouped deep learning primitives.
+**Tensoris** (`tensoris`) is a standardized, high-performance architecture framework tailored for AI researchers, scientific engineers, and deep learning practitioners. It bridges the gap between theoretical peer-reviewed research papers and production-ready PyTorch implementations by enforcing strict modularity, automated API documentation, Docker GPU reproducibility, and domain-grouped deep learning primitives.
 
 ---
 
@@ -30,14 +29,15 @@ The repository enforces a clean 3-tier separation of concerns across neural netw
 
 ```
 src/
-├── backend/
-│   ├── components/
-│   │   ├── layers/      <-- Atomic neural network layers (ConvStem, PositionalEncoding)
-│   │   └── blocks/      <-- Reusable multi-layer blocks (ResidualBlock, TransformerEncoderBlock, VAE Blocks)
-│   ├── losses/          <-- Peer-reviewed loss functions (Focal, Dice, LabelSmoothing, InfoNCE, Perceptual)
-│   ├── metrics/         <-- Evaluation metrics (mIoU, Top-K Accuracy, Perplexity, FID Score)
-│   └── trainers/        <-- Robust ModelTrainer execution loop
-├── models/              <-- Complete composite end-to-end architectures (VisionBackbone, Transformer, VAE)
+└── tensoris/
+    ├── backend/
+    │   ├── components/
+    │   │   ├── layers/      <-- Atomic neural network layers (ConvStem, PositionalEncoding)
+    │   │   └── blocks/      <-- Reusable multi-layer blocks (ResidualBlock, TransformerEncoderBlock, VAE Blocks)
+    │   ├── losses/          <-- Peer-reviewed loss functions (Focal, Dice, LabelSmoothing, InfoNCE, Perceptual)
+    │   ├── metrics/         <-- Evaluation metrics (mIoU, Top-K Accuracy, Perplexity, FID Score)
+    │   └── trainers/        <-- Robust ModelTrainer execution loop
+    ├── models/              <-- Complete composite end-to-end architectures (VisionBackbone, Transformer, VAE)
 ├── data/                <-- Dataset loaders and data pipeline abstractions
 └── lib/                 <-- Utility helpers, seed managers, and system diagnostics
 ```
@@ -60,11 +60,11 @@ Every primitive included in this template is implemented in PyTorch and document
 
 | Command | Purpose | Target Script |
 | :--- | :--- | :--- |
-| `python3 main.py` | Run environment diagnostics (Python, PyTorch, GPU device) | [`main.py`](file:///Users/haddagart/Developer/haddagart/templates/haddag-dl-template-2/main.py) |
-| `python3 scripts/train.py` | Launch PyTorch model training loop | [`scripts/train.py`](file:///Users/haddagart/Developer/haddagart/templates/haddag-dl-template-2/scripts/train.py) |
-| `python3 scripts/evaluate.py` | Compute evaluation metrics on validation set | [`scripts/evaluate.py`](file:///Users/haddagart/Developer/haddagart/templates/haddag-dl-template-2/scripts/evaluate.py) |
-| `uv run properdocs serve` | Launch live local documentation server | [`properdocs.yml`](file:///Users/haddagart/Developer/haddagart/templates/haddag-dl-template-2/properdocs.yml) |
-| `docker compose -f docker/docker-compose.yml up` | Launch GPU Docker container with live volume mounts | [`docker/docker-compose.yml`](file:///Users/haddagart/Developer/haddagart/templates/haddag-dl-template-2/docker/docker-compose.yml) |
+| `python3 main.py` | Run environment diagnostics (Python, PyTorch, GPU device) | [`main.py`](file:///Users/haddagart/Developer/haddagart/templates/tensoris/main.py) |
+| `python3 scripts/train.py` | Launch PyTorch model training loop | [`scripts/train.py`](file:///Users/haddagart/Developer/haddagart/templates/tensoris/scripts/train.py) |
+| `python3 scripts/evaluate.py` | Compute evaluation metrics on validation set | [`scripts/evaluate.py`](file:///Users/haddagart/Developer/haddagart/templates/tensoris/scripts/evaluate.py) |
+| `uv run properdocs serve` | Launch live local documentation server | [`properdocs.yml`](file:///Users/haddagart/Developer/haddagart/templates/tensoris/properdocs.yml) |
+| `docker compose -f docker/docker-compose.yml up` | Launch GPU Docker container with live volume mounts | [`docker/docker-compose.yml`](file:///Users/haddagart/Developer/haddagart/templates/tensoris/docker/docker-compose.yml) |
 
 ---
 

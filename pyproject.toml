@@ -87,9 +87,20 @@ line-ending = "auto"
 [tool.mypy]
 python_version = "3.11"
 strict = false
-warn_return_any = true
+warn_return_any = false
 warn_unused_configs = true
 disallow_untyped_defs = false
+
+[[tool.mypy.overrides]]
+module = [
+    "torch.*",
+    "huggingface_hub.*",
+    "kaggle.*",
+    "roboflow.*",
+    "ultralytics.*",
+    "wandb.*",
+]
+ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 minversion = "8.0"

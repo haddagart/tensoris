@@ -6,6 +6,7 @@ from typing import Any
 
 try:
     import roboflow  # type: ignore
+
     _ROBOFLOW_AVAILABLE = True
 except ImportError:  # pragma: no cover
     _ROBOFLOW_AVAILABLE = False
@@ -58,7 +59,9 @@ class RoboflowIntegration:
                 "and set ROBOFLOW_API_KEY environment variable."
             )
         if not self.api_key:
-            raise ValueError("ROBOFLOW_API_KEY is required to download datasets from Roboflow.")
+            raise ValueError(
+                "ROBOFLOW_API_KEY is required to download datasets from Roboflow."
+            )
 
         rf = roboflow.Roboflow(api_key=self.api_key)
         proj = rf.workspace(workspace).project(project_id)

@@ -20,7 +20,9 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    print(f"[Evaluate] Initializing benchmark (package version: {tensoris.__version__})")
+    print(
+        f"[Evaluate] Initializing benchmark (package version: {tensoris.__version__})"
+    )
     print(f"[Evaluate] Model checkpoint: {args.checkpoint}")
     print("[Evaluate] Evaluation completed successfully.")
 

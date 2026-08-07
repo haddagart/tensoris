@@ -49,38 +49,54 @@ class NavNode:
         self.packages: dict[str, NavNode] = {}  # title -> NavNode
 
 
-src_dir = Path("src/tensoris")
+src_dir = Path("src")
 root = NavNode("API Reference")
 
 for path in sorted(src_dir.rglob("*.py")):
-    module_path = path.relative_to(src_dir).with_suffix("")
-    parts = tuple(module_path.parts)
+    module_parts = path.relative_to(src_dir).with_suffix("").parts
 
-    # Skip __init__.py and __main__.py so folder headers display child modules directly
-    if not parts or parts[-1] in ("__init__", "__main__"):
+    if not module_parts or module_parts[-1] == "__main__":
         continue
 
-    doc_path = path.relative_to(src_dir).with_suffix(".md")
+    is_init = module_parts[-1] == "__init__"
+
+    if is_init:
+        # For __init__.py, document the package itself (e.g., tensoris.backend.callbacks)
+        pkg_parts = module_parts[:-1]
+        if len(pkg_parts) <= 1:
+            # Skip root tensoris package __init__.py
+            continue
+        identifier = ".".join(pkg_parts)
+        nav_parts = pkg_parts[1:] if pkg_parts[0] == "tensoris" else pkg_parts
+        doc_path = Path(*nav_parts) / "index.md"
+    else:
+        # For standard modules (e.g., cv.py)
+        identifier = ".".join(module_parts)
+        nav_parts = module_parts[1:] if module_parts[0] == "tensoris" else module_parts
+        doc_path = Path(*nav_parts).with_suffix(".md")
+
     full_doc_path = Path("api", doc_path)
 
     # Generate virtual Markdown API doc file for mkdocstrings parsing
     with mkdocs_gen_files.open(full_doc_path, "w") as fd:
-        identifier = ".".join(parts)
         fd.write(f"::: {identifier}\n")
 
     mkdocs_gen_files.set_edit_path(full_doc_path, path)
 
     # Populate navigation tree hierarchy
     current = root
-    for part in parts[:-1]:
+    for part in nav_parts[:-1]:
         title = NAV_TITLES.get(part, part.replace("_", " ").title())
         if title not in current.packages:
             current.packages[title] = NavNode(title)
         current = current.packages[title]
 
-    leaf_part = parts[-1]
+    leaf_part = nav_parts[-1]
     leaf_title = NAV_TITLES.get(leaf_part, leaf_part.replace("_", " ").title())
-    current.modules[leaf_title] = doc_path.as_posix()
+    if is_init:
+        current.modules[f"{leaf_title} Overview"] = doc_path.as_posix()
+    else:
+        current.modules[leaf_title] = doc_path.as_posix()
 
 
 def render_nav_tree(node: NavNode, indent: int = 0) -> list[str]:

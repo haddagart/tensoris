@@ -1,22 +1,19 @@
-# Deep Learning Project Boilerplate
+# Tensoris
 
-[![CI](https://github.com/haddagart/haddag-dl-template-2/actions/workflows/ci.yml/badge.svg)](https://github.com/haddagart/haddag-dl-template-2/actions/workflows/ci.yml)
-[![Docs](https://github.com/haddagart/haddag-dl-template-2/actions/workflows/docs.yml/badge.svg)](https://haddagart.github.io/haddag-dl-template-2/)
+[![CI](https://github.com/haddagart/tensoris/actions/workflows/ci.yml/badge.svg)](https://github.com/haddagart/tensoris/actions/workflows/ci.yml)
+[![Docs](https://github.com/haddagart/tensoris/actions/workflows/docs.yml/badge.svg)](https://haddagart.github.io/tensoris/)
+[![PyPI](https://img.shields.io/pypi/v/tensoris.svg)](https://pypi.org/project/tensoris/)
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 [![Code Style: Ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Environment: Green Computing](https://img.shields.io/badge/environment-green%20computing-2b9348.svg)](#social-responsibility--environmental-commitment)
-[![Equality: Anti-Discrimination](https://img.shields.io/badge/equality-anti--racism%20%26%20anti--discrimination-black.svg)](#social-responsibility--environmental-commitment)
-[![Open Science: Free Access](https://img.shields.io/badge/open%20science-free%20%26%20accessible-0284c7.svg)](#social-responsibility--environmental-commitment)
 <br/>
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-rSpkNpYAAAAJ-4285F4?logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=rSpkNpYAAAAJ)
 [![ORCID](https://img.shields.io/badge/ORCID-0000--0002--6481--0999-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0000-0002-6481-0999)
 [![GitHub](https://img.shields.io/badge/GitHub-haddagart-181717?logo=github&logoColor=white)](https://github.com/haddagart)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Abdelkader%20Haddag-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/haddagart/)
 [![X](https://img.shields.io/badge/X-haddagart-000000?logo=x&logoColor=white)](https://x.com/haddagart)
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Haddag%20A.-FFDD00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/mk766p2kyje)
 
-A modular, production-ready Deep Learning project boilerplate template designed for high reproducibility, fast iteration with [`uv`](https://github.com/astral-sh/uv), automated documentation via MaterialX & docstring parsing, pre-commit quality enforcement, and GitHub Actions CI/CD workflows.
+**Tensoris** is a production-ready PyTorch deep learning library and framework featuring modular neural components, automated multi-version documentation via `mike`, pre-commit quality checks, and automated PyPI CI/CD releases.
 
 ---
 
@@ -48,8 +45,8 @@ Complete this manual checklist before writing project code:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/haddagart/haddag-dl-template-2.git
-cd haddag-dl-template-2
+git clone https://github.com/haddagart/tensoris.git
+cd tensoris
 
 # 2. Sync dependencies & setup virtual environment
 uv sync --all-groups
@@ -125,9 +122,10 @@ We stand firmly against all forms of racism, discrimination, harassment, and soc
 
 ### 🤖 AI & Agentic Coding in Research: Ethics & Scientific Deontology
 
-Artificial Intelligence and Agentic Coding assistants are transformative catalysts for modern science—accelerating software setup, streamlining boilerplate engineering, and freeing researchers to focus on core domain insights. 
+Artificial Intelligence and Agentic Coding assistants are transformative catalysts for modern science—accelerating software setup, streamlining boilerplate engineering, and freeing researchers to focus on core domain insights.
 
 However, technology serves as an amplifier of human intent, not a substitute for human responsibility. We advocate for the ethical and transparent use of AI in scientific research:
+
 - **Human Accountability**: Authors and researchers remain fully accountable for their code correctness, mathematical proofs, experimental results, and scientific claims.
 - **Scientific Rigor & Deontology**: AI-generated code, algorithms, and analytical logic must be thoroughly audited, verified, and validated against empirical ground truth.
 - **Transparency & Attribution**: We encourage open declaration of AI tools used during software development and manuscript preparation, upholding the highest standards of academic honesty, reproducibility, and scientific ethics.
@@ -136,25 +134,25 @@ However, technology serves as an amplifier of human intent, not a substitute for
 
 ## Citation & Attribution
 
-If you use this boilerplate template for your research or open-source projects, please consider keeping a link back to this repository and crediting the author:
+If you use **Tensoris** in your academic research or production applications, please consider citing it as below:
 
-- **Original Template Author**: **Abdelkader Haddag**
-- **Connect & Profiles**:
-  [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-rSpkNpYAAAAJ-4285F4?logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=rSpkNpYAAAAJ)
-  [![ORCID](https://img.shields.io/badge/ORCID-0000--0002--6481--0999-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0000-0002-6481-0999)
-  [![GitHub](https://img.shields.io/badge/GitHub-haddagart-181717?logo=github&logoColor=white)](https://github.com/haddagart)
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Abdelkader%20Haddag-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/haddagart/)
-  [![X](https://img.shields.io/badge/X-haddagart-000000?logo=x&logoColor=white)](https://x.com/haddagart)
-  [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Haddag%20A.-FFDD00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/mk766p2kyje)
+### BibTeX Entry
 
 ```bibtex
-@software{haddag_dl_template_2026,
-  author       = {Abdelkader Haddag},
-  title        = {Modular Deep Learning Project Boilerplate Template},
+@software{haddag_tensoris_2026,
+  author       = {Haddag, Abdelkader},
+  title        = {Tensoris: Production-Ready PyTorch Framework},
+  abstract     = {Production-ready PyTorch library with automated CI/CD, multi-version docs, and PyPI packaging. Made for researchers and coders in mind first.},
   year         = {2026},
-  url          = {https://github.com/haddagart/haddag-dl-template-2}
+  publisher    = {GitHub},
+  journal      = {GitHub repository},
+  howpublished = {\url{https://github.com/haddagart/tensoris}}
 }
 ```
+
+### APA Style
+
+> Haddag, A. (2026). _Tensoris: Production-Ready PyTorch Framework_. GitHub. https://github.com/haddagart/tensoris
 
 ---
 

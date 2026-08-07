@@ -69,7 +69,7 @@ Check VRAM memory allocation programmatically:
 import torch
 
 if torch.cuda.is_available():
-    allocated = torch.cuda.memory_allocated() / (1024 ** 2)
-    reserved = torch.cuda.memory_reserved() / (1024 ** 2)
+    allocated = torch.cuda.memory_allocated() / (1024**2)
+    reserved = torch.cuda.memory_reserved() / (1024**2)
     print(f"Allocated VRAM: {allocated:.2f} MB | Reserved VRAM: {reserved:.2f} MB")
 ```

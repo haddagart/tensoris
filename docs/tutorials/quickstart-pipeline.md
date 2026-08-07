@@ -24,7 +24,7 @@ This tutorial provides a complete walkthrough for configuring hyperparameter YAM
 
 All training experiments are controlled via modular YAML configuration files located under `inputs/experiments/`.
 
-Inspect [`inputs/experiments/default.yaml`](https://github.com/haddagart/haddag-dl-template-2/blob/main/inputs/experiments/default.yaml):
+Inspect [`inputs/experiments/default.yaml`](https://github.com/haddagart/tensoris/blob/main/inputs/experiments/default.yaml):
 
 ```yaml
 experiment_name: "default_resnet_baseline"

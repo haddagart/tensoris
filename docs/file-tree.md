@@ -58,29 +58,30 @@ This document describes the directory layout and architectural organization for 
 │   ├── finetune.py          # Model fine-tuning & transfer learning script
 │   ├── evaluate.py          # Model evaluation & benchmarking script
 │   └── inference.py         # Batch and single-sample inference script
-├── src/                     # Core source code package
-│   ├── backend/             # Execution engines, training components, and objectives
-│   │   ├── callbacks/       # Checkpointing, early stopping, LR schedulers, W&B logging
-│   │   ├── components/      # Neural network sub-building blocks
-│   │   │   ├── blocks/      # Multi-layer building blocks (e.g., ResidualBlock, TransformerEncoder)
-│   │   │   ├── layers/      # Custom neural network layers (e.g., Attention, Normalization)
-│   │   │   └── stages/      # Multi-block architecture stages (e.g., BackboneStage)
-│   │   ├── losses/          # Custom loss functions and compound objective criteria
-│   │   ├── metrics/         # Domain-specific evaluation metrics and scoring functions
-│   │   └── trainers/        # Execution engines & training loops
-│   ├── configs/             # Base configuration schemas and defaults (e.g. Hydra / OmegaConf)
-│   ├── data/                # Data loading logic, PyTorch Datasets, DataLoaders, and transforms
-│   ├── dependencies/        # External library wrappers and third-party integrations
-│   ├── lib/                 # Shared core utilities
-│   │   ├── core/            # Core primitives and constants
-│   │   ├── io/              # File I/O, serialization, and cloud storage utilities
-│   │   └── utils/           # Helper functions, logging setups, and seed fixers
-│   └── models/              # Top-level neural network architectures and full model wrappers
+├── src/                     # Core source code directory
+│   └── tensoris/            # Core Tensoris Python package
+│       ├── backend/         # Execution engines, training components, and objectives
+│       │   ├── callbacks/   # Checkpointing, early stopping, LR schedulers, W&B logging
+│       │   ├── components/  # Neural network sub-building blocks
+│       │   │   ├── blocks/  # Multi-layer building blocks (e.g., ResidualBlock, TransformerEncoder)
+│       │   │   ├── layers/  # Custom neural network layers (e.g., Attention, Normalization)
+│       │   │   └── stages/  # Multi-block architecture stages (e.g., BackboneStage)
+│       │   ├── losses/      # Custom loss functions and compound objective criteria
+│       │   ├── metrics/     # Domain-specific evaluation metrics and scoring functions
+│       │   └── trainers/    # Execution engines & training loops
+│       ├── configs/         # Base configuration schemas and defaults
+│       ├── data/            # Data loading logic, PyTorch Datasets, DataLoaders, and transforms
+│       ├── dependencies/    # External library wrappers and third-party integrations
+│       ├── lib/             # Shared core utilities
+│       │   ├── core/        # Core primitives and constants
+│       │   ├── io/          # File I/O, serialization, and cloud storage utilities
+│       │   └── utils/       # Helper functions, logging setups, and seed fixers
+│       └── models/          # Top-level neural network architectures and full model wrappers
 ├── temp/                    # Temporary scratch directory (ignored by git except .gitkeep)
 ├── tests/                   # Automated test suite
 │   ├── e2e/                 # End-to-end integration and pipeline tests
 │   ├── integration/         # Inter-component integration tests
-│   └── unit/                # Fast unit tests for layers, metrics, and utils
+│   └── unit/                # Fast unit tests for layers, metrics, models, and utils
 └── toolkit/                 # Developer tooling, CLI helpers, and code generation scripts
 ```
 
@@ -88,17 +89,17 @@ This document describes the directory layout and architectural organization for 
 
 ## Directory Roles & Architectural Guidelines
 
-### 1. `src/` Package Architecture
+### 1. `src/tensoris/` Package Architecture
 
-- **`src/models/`**: Houses full model definitions. A model here combines backbones, custom components, and prediction heads into a unified API.
-- **`src/backend/`**: Contains execution mechanisms and structural primitives:
+- **`src/tensoris/models/`**: Houses full model definitions. A model here combines backbones, custom components, and prediction heads into a unified API.
+- **`src/tensoris/backend/`**: Contains execution mechanisms and structural primitives:
   - `components/`: Modular sub-architectures (`layers`, `blocks`, `stages`).
   - `trainers/`: Training and validation step execution logic.
   - `callbacks/`: Event hooks for logging, early stopping, and checkpoint management.
   - `losses/` & `metrics/`: Objective functions and validation metrics.
-- **`src/data/`**: Encapsulates PyTorch `Dataset`, `DataLoader`, data cleaning, and augmentation transforms.
-- **`src/configs/`**: Stores base config definitions and schema validation logic.
-- **`src/lib/`**: Contains shared low-level helpers (`core`, `io`, `utils`).
+- **`src/tensoris/data/`**: Encapsulates PyTorch `Dataset`, `DataLoader`, data cleaning, and augmentation transforms.
+- **`src/tensoris/configs/`**: Stores base config definitions and schema validation logic.
+- **`src/tensoris/lib/`**: Contains shared low-level helpers (`core`, `io`, `utils`).
 
 ### 2. Workflow Scripts (`scripts/` vs `main.py`)
 

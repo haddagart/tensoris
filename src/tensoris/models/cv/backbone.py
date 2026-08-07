@@ -17,7 +17,9 @@ class VisionBackbone(nn.Module):
         DOI: https://doi.org/10.1109/CVPR.2016.90 | arXiv: https://arxiv.org/abs/1512.03385
     """
 
-    def __init__(self, in_channels: int = 3, num_classes: int = 1000, hidden_dim: int = 64) -> None:
+    def __init__(
+        self, in_channels: int = 3, num_classes: int = 1000, hidden_dim: int = 64
+    ) -> None:
         """Initialize Vision Backbone model layers.
 
         Args:

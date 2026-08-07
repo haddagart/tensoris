@@ -12,7 +12,7 @@ Thank you for helping improve this deep learning boilerplate repository!
 
 Before filing an issue, please verify the following:
 
-1. **Search Existing Issues**: Search [GitHub Issues](https://github.com/haddagart/haddag-dl-template-2/issues) to ensure the bug hasn't already been reported.
+1. **Search Existing Issues**: Search [GitHub Issues](https://github.com/haddagart/tensoris/issues) to ensure the bug hasn't already been reported.
 2. **Isolate the Problem**: Provide a minimal reproduction script (see [Creating a Minimal Reproduction](reproduction.md)).
 3. **Include System Details**:
    - Python version (`python3 --version`)

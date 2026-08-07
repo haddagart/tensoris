@@ -29,7 +29,7 @@ uv sync --all-groups --python 3.12
 ```
 
 > [!NOTE]
-> If switching to a lower Python version (e.g., Python 3.10), update the `requires-python` constraint in [`pyproject.toml`](https://github.com/haddagart/haddag-dl-template-2/blob/main/pyproject.toml):
+> If switching to a lower Python version (e.g., Python 3.10), update the `requires-python` constraint in [`pyproject.toml`](https://github.com/haddagart/tensoris/blob/main/pyproject.toml):
 > ```toml
 > [project]
 > requires-python = ">=3.10"

@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
-  <!-- All White Header Navigation Bar Logo Variant -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" width="420" height="100">
+  <!-- Header Navigation Bar Tensoris Logo Variant (Pure White for Dark Header) -->
   <g transform="translate(10, 10)">
     <!-- Connection Lines in Pure White -->
     <path d="M 40 15 L 70 35 L 55 75 L 25 75 L 10 35 Z" fill="none" stroke="#FFFFFF" stroke-width="2.8" stroke-opacity="0.9" />
@@ -15,14 +15,11 @@
     <circle cx="40" cy="42" r="6.5" fill="#FFFFFF" />
   </g>
 
-  <!-- Pure White Header Typography -->
-  <text x="100" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="34" letter-spacing="1" fill="#FFFFFF">
-    DL
+  <!-- Pure White Tensoris Header Typography -->
+  <text x="100" y="54" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="34" letter-spacing="1.5" fill="#FFFFFF">
+    TENSORIS
   </text>
-  <text x="155" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="22" letter-spacing="0.5" fill="#FFFFFF">
-    TEMPLATE
-  </text>
-  <text x="101" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="600" font-size="11" letter-spacing="3" fill="#FFFFFF" fill-opacity="0.9">
-    DEEP LEARNING BOILERPLATE
+  <text x="101" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="10" letter-spacing="2.5" fill="#FFFFFF" fill-opacity="0.85">
+    PYTORCH LIBRARY &amp; FRAMEWORK
   </text>
 </svg>

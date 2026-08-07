@@ -4,7 +4,7 @@ icon: material/flash
 
 # TL;DR Quickstart Guide
 
-A concise, high-speed quickstart guide for getting up and running with the **Modular Deep Learning Project Boilerplate Template**!
+A concise, high-speed quickstart guide for getting up and running with **Tensoris**!
 
 ---
 
@@ -12,8 +12,8 @@ A concise, high-speed quickstart guide for getting up and running with the **Mod
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/haddagart/haddag-dl-template-2.git
-cd haddag-dl-template-2
+git clone https://github.com/haddagart/tensoris.git
+cd tensoris
 
 # 2. Sync dependencies & setup virtual environment
 uv sync --all-groups
@@ -52,14 +52,14 @@ uv sync --all-groups --python 3.12
 ```
 
 > [!TIP]
-> Remember to update `requires-python` in [`pyproject.toml`](https://github.com/haddagart/haddag-dl-template-2/blob/main/pyproject.toml) if targeting a lower or higher Python version (e.g., `requires-python = ">=3.10"`).
+> Remember to update `requires-python` in [`pyproject.toml`](https://github.com/haddagart/tensoris/blob/main/pyproject.toml) if targeting a lower or higher Python version (e.g., `requires-python = ">=3.10"`).
 
 ---
 
 ## 📋 Pre-Coding Setup Checklist
 
-- [x] **Project Metadata**: Update `name`, `version`, and `requires-python` in [`pyproject.toml`](https://github.com/haddagart/haddag-dl-template-2/blob/main/pyproject.toml).
+- [x] **Project Metadata**: Update `name`, `version`, and `requires-python` in [`pyproject.toml`](https://github.com/haddagart/tensoris/blob/main/pyproject.toml).
 - [x] **Environment Sync**: Run `uv sync --all-groups`.
 - [x] **Git Hooks**: Run `uv run pre-commit install`.
-- [x] **Documentation Settings**: Update `site_name` and `site_url` in [`properdocs.yml`](https://github.com/haddagart/haddag-dl-template-2/blob/main/properdocs.yml).
-- [x] **Citation Information**: Update author details in [`CITATION.cff`](https://github.com/haddagart/haddag-dl-template-2/blob/main/CITATION.cff) and [Citation & Contact](citation-contact.md).
+- [x] **Documentation Settings**: Update `site_name` and `site_url` in [`properdocs.yml`](https://github.com/haddagart/tensoris/blob/main/properdocs.yml).
+- [x] **Citation Information**: Update author details in [`CITATION.cff`](https://github.com/haddagart/tensoris/blob/main/CITATION.cff) and [Citation & Contact](citation-contact.md).

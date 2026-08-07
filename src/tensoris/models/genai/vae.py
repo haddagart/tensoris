@@ -16,7 +16,9 @@ class VariationalAutoencoder(nn.Module):
         arXiv: https://arxiv.org/abs/1312.6114
     """
 
-    def __init__(self, input_dim: int = 784, hidden_dim: int = 400, latent_dim: int = 20) -> None:
+    def __init__(
+        self, input_dim: int = 784, hidden_dim: int = 400, latent_dim: int = 20
+    ) -> None:
         """Initialize VAE encoder and decoder parameters.
 
         Args:
@@ -42,7 +44,9 @@ class VariationalAutoencoder(nn.Module):
         """Decode latent vector z back to original feature space."""
         return self.decoder(z)
 
-    def forward(self, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+    def forward(
+        self, x: torch.Tensor
+    ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
         """Execute full VAE forward encoding, reparameterization, and reconstruction.
 
         Args:

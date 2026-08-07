@@ -26,7 +26,9 @@ class FIDScoreMetric:
         """
         self.feature_dim = feature_dim
 
-    def compute(self, real_features: torch.Tensor, gen_features: torch.Tensor) -> torch.Tensor:
+    def compute(
+        self, real_features: torch.Tensor, gen_features: torch.Tensor
+    ) -> torch.Tensor:
         """Compute Fréchet distance between real and generated feature Gaussians.
 
         Args:
@@ -41,8 +43,16 @@ class FIDScoreMetric:
 
         mean_diff = torch.sum((mu_real - mu_gen) ** 2)
 
-        sigma_real = torch.cov(real_features.T) if real_features.size(0) > 1 else torch.eye(self.feature_dim)
-        sigma_gen = torch.cov(gen_features.T) if gen_features.size(0) > 1 else torch.eye(self.feature_dim)
+        sigma_real = (
+            torch.cov(real_features.T)
+            if real_features.size(0) > 1
+            else torch.eye(self.feature_dim)
+        )
+        sigma_gen = (
+            torch.cov(gen_features.T)
+            if gen_features.size(0) > 1
+            else torch.eye(self.feature_dim)
+        )
 
         trace_sum = torch.trace(sigma_real) + torch.trace(sigma_gen)
         return mean_diff + trace_sum

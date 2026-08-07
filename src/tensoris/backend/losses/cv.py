@@ -21,7 +21,9 @@ class FocalLoss(nn.Module):
         DOI: https://doi.org/10.1109/ICCV.2017.324 | arXiv: https://arxiv.org/abs/1708.02002
     """
 
-    def __init__(self, alpha: float = 0.25, gamma: float = 2.0, reduction: str = "mean") -> None:
+    def __init__(
+        self, alpha: float = 0.25, gamma: float = 2.0, reduction: str = "mean"
+    ) -> None:
         """Initialize Focal Loss.
 
         Args:
@@ -89,10 +91,18 @@ class DiceLoss(nn.Module):
         Returns:
             Scalar Dice loss value (1.0 - Dice coefficient).
         """
-        probs = F.softmax(logits, dim=1) if logits.ndim > 2 and logits.shape[1] > 1 else torch.sigmoid(logits)
+        probs = (
+            F.softmax(logits, dim=1)
+            if logits.ndim > 2 and logits.shape[1] > 1
+            else torch.sigmoid(logits)
+        )
 
         if targets.ndim == logits.ndim - 1:
-            targets = F.one_hot(targets, num_classes=logits.shape[1]).permute(0, 3, 1, 2).float()
+            targets = (
+                F.one_hot(targets, num_classes=logits.shape[1])
+                .permute(0, 3, 1, 2)
+                .float()
+            )
 
         dims = (0,) + tuple(range(2, probs.ndim))
         intersection = torch.sum(probs * targets, dim=dims)

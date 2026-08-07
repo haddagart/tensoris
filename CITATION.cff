@@ -4,7 +4,8 @@ authors:
   - family-names: "Haddag"
     given-names: "Abdelkader"
     orcid: "https://orcid.org/0000-0002-6481-0999"
-title: "Deep Learning Project Boilerplate"
+title: "Tensoris: Production-Ready PyTorch Framework"
+abstract: "Production-ready PyTorch library with automated CI/CD, multi-version docs, and PyPI packaging. Made for researchers and coders in mind first."
 version: 1.0.0
 date-released: 2026-08-05
-url: "https://github.com/haddagart/haddag-dl-template-2"
+url: "https://github.com/haddagart/tensoris"

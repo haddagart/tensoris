@@ -340,83 +340,6 @@ wheels = [
 ]
 
 [[package]]
-name = "dl"
-source = { editable = "." }
-
-[package.optional-dependencies]
-dev = [
-    { name = "cairosvg" },
-    { name = "hatch-vcs" },
-    { name = "mike" },
-    { name = "mkdocs-gen-files" },
-    { name = "mkdocs-git-revision-date-localized-plugin" },
-    { name = "mkdocs-literate-nav" },
-    { name = "mkdocs-materialx" },
-    { name = "mkdocstrings", extra = ["python"] },
-    { name = "mypy" },
-    { name = "pillow" },
-    { name = "pre-commit" },
-    { name = "properdocs" },
-    { name = "pytest" },
-    { name = "ruff" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "cairosvg" },
-    { name = "hatch-vcs" },
-    { name = "mike" },
-    { name = "mkdocs-gen-files" },
-    { name = "mkdocs-git-revision-date-localized-plugin" },
-    { name = "mkdocs-literate-nav" },
-    { name = "mkdocs-materialx" },
-    { name = "mkdocstrings", extra = ["python"] },
-    { name = "mypy" },
-    { name = "pillow" },
-    { name = "pre-commit" },
-    { name = "properdocs" },
-    { name = "pytest" },
-    { name = "ruff" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "cairosvg", marker = "extra == 'dev'", specifier = ">=2.7.0" },
-    { name = "hatch-vcs", marker = "extra == 'dev'", specifier = ">=0.4.0" },
-    { name = "mike", marker = "extra == 'dev'", specifier = ">=2.1.0" },
-    { name = "mkdocs-gen-files", marker = "extra == 'dev'", specifier = ">=0.5.0" },
-    { name = "mkdocs-git-revision-date-localized-plugin", marker = "extra == 'dev'", specifier = ">=1.2.0" },
-    { name = "mkdocs-literate-nav", marker = "extra == 'dev'", specifier = ">=0.6.0" },
-    { name = "mkdocs-materialx", marker = "extra == 'dev'", specifier = ">=10.0.0" },
-    { name = "mkdocstrings", extras = ["python"], marker = "extra == 'dev'", specifier = ">=0.25.0" },
-    { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.10.0" },
-    { name = "pillow", marker = "extra == 'dev'", specifier = ">=10.0.0" },
-    { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=3.7.0" },
-    { name = "properdocs", marker = "extra == 'dev'", specifier = ">=1.6.0" },
-    { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.0.0" },
-    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.4.0" },
-]
-provides-extras = ["dev"]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "cairosvg", specifier = ">=2.7.0" },
-    { name = "hatch-vcs", specifier = ">=0.4.0" },
-    { name = "mike", specifier = ">=2.1.0" },
-    { name = "mkdocs-gen-files", specifier = ">=0.5.0" },
-    { name = "mkdocs-git-revision-date-localized-plugin", specifier = ">=1.2.0" },
-    { name = "mkdocs-literate-nav", specifier = ">=0.6.0" },
-    { name = "mkdocs-materialx", specifier = ">=10.0.0" },
-    { name = "mkdocstrings", extras = ["python"], specifier = ">=0.25.0" },
-    { name = "mypy", specifier = ">=1.10.0" },
-    { name = "pillow", specifier = ">=10.0.0" },
-    { name = "pre-commit", specifier = ">=3.7.0" },
-    { name = "properdocs", specifier = ">=1.6.0" },
-    { name = "pytest", specifier = ">=8.0.0" },
-    { name = "ruff", specifier = ">=0.4.0" },
-]
-
-[[package]]
 name = "filelock"
 version = "3.32.2"
 source = { registry = "https://pypi.org/simple" }
@@ -1390,6 +1313,83 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/1f/ea/49c993d6dfdd7338c9b1000a0f36817ed7ec84577ae2e52f890d1a4ff909/smmap-5.0.3.tar.gz", hash = "sha256:4d9debb8b99007ae47165abc08670bd74cb74b5227dda7f643eccc4e9eb5642c", size = 22506, upload-time = "2026-03-09T03:43:26.1Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c1/d4/59e74daffcb57a07668852eeeb6035af9f32cbfd7a1d2511f17d2fe6a738/smmap-5.0.3-py3-none-any.whl", hash = "sha256:c106e05d5a61449cf6ba9a1e650227ecfb141590d2a98412103ff35d89fc7b2f", size = 24390, upload-time = "2026-03-09T03:43:24.361Z" },
+]
+
+[[package]]
+name = "tensoris"
+source = { editable = "." }
+
+[package.optional-dependencies]
+dev = [
+    { name = "cairosvg" },
+    { name = "hatch-vcs" },
+    { name = "mike" },
+    { name = "mkdocs-gen-files" },
+    { name = "mkdocs-git-revision-date-localized-plugin" },
+    { name = "mkdocs-literate-nav" },
+    { name = "mkdocs-materialx" },
+    { name = "mkdocstrings", extra = ["python"] },
+    { name = "mypy" },
+    { name = "pillow" },
+    { name = "pre-commit" },
+    { name = "properdocs" },
+    { name = "pytest" },
+    { name = "ruff" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "cairosvg" },
+    { name = "hatch-vcs" },
+    { name = "mike" },
+    { name = "mkdocs-gen-files" },
+    { name = "mkdocs-git-revision-date-localized-plugin" },
+    { name = "mkdocs-literate-nav" },
+    { name = "mkdocs-materialx" },
+    { name = "mkdocstrings", extra = ["python"] },
+    { name = "mypy" },
+    { name = "pillow" },
+    { name = "pre-commit" },
+    { name = "properdocs" },
+    { name = "pytest" },
+    { name = "ruff" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "cairosvg", marker = "extra == 'dev'", specifier = ">=2.7.0" },
+    { name = "hatch-vcs", marker = "extra == 'dev'", specifier = ">=0.4.0" },
+    { name = "mike", marker = "extra == 'dev'", specifier = ">=2.1.0" },
+    { name = "mkdocs-gen-files", marker = "extra == 'dev'", specifier = ">=0.5.0" },
+    { name = "mkdocs-git-revision-date-localized-plugin", marker = "extra == 'dev'", specifier = ">=1.2.0" },
+    { name = "mkdocs-literate-nav", marker = "extra == 'dev'", specifier = ">=0.6.0" },
+    { name = "mkdocs-materialx", marker = "extra == 'dev'", specifier = ">=10.0.0" },
+    { name = "mkdocstrings", extras = ["python"], marker = "extra == 'dev'", specifier = ">=0.25.0" },
+    { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.10.0" },
+    { name = "pillow", marker = "extra == 'dev'", specifier = ">=10.0.0" },
+    { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=3.7.0" },
+    { name = "properdocs", marker = "extra == 'dev'", specifier = ">=1.6.0" },
+    { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.0.0" },
+    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.4.0" },
+]
+provides-extras = ["dev"]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "cairosvg", specifier = ">=2.7.0" },
+    { name = "hatch-vcs", specifier = ">=0.4.0" },
+    { name = "mike", specifier = ">=2.1.0" },
+    { name = "mkdocs-gen-files", specifier = ">=0.5.0" },
+    { name = "mkdocs-git-revision-date-localized-plugin", specifier = ">=1.2.0" },
+    { name = "mkdocs-literate-nav", specifier = ">=0.6.0" },
+    { name = "mkdocs-materialx", specifier = ">=10.0.0" },
+    { name = "mkdocstrings", extras = ["python"], specifier = ">=0.25.0" },
+    { name = "mypy", specifier = ">=1.10.0" },
+    { name = "pillow", specifier = ">=10.0.0" },
+    { name = "pre-commit", specifier = ">=3.7.0" },
+    { name = "properdocs", specifier = ">=1.6.0" },
+    { name = "pytest", specifier = ">=8.0.0" },
+    { name = "ruff", specifier = ">=0.4.0" },
 ]
 
 [[package]]

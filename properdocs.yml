@@ -1,10 +1,10 @@
-site_name: Deep Learning Boilerplate Documentation
-site_description: Production-Grade Academic-First PyTorch Project Template Documentation
-site_url: https://haddagart.github.io/haddag-dl-template-2/
+site_name: Tensoris Documentation
+site_description: Production-Grade Academic-First PyTorch Framework
+site_url: https://haddagart.github.io/tensoris/
 dev_addr: 127.0.0.1:8942
 
-repo_name: haddagart/haddag-dl-template-2
-repo_url: https://github.com/haddagart/haddag-dl-template-2
+repo_name: haddagart/tensoris
+repo_url: https://github.com/haddagart/tensoris
 
 copyright: >
   Copyright &copy; 2026 <a href="https://github.com/haddagart" target="_blank">Abdelkader Haddag</a>.
@@ -121,7 +121,7 @@ markdown_extensions:
   - pymdownx.magiclink:
       repo_url_shorthand: true
       user: haddagart
-      repo: haddag-dl-template-2
+      repo: tensoris
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences:

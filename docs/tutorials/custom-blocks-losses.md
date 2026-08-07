@@ -30,6 +30,7 @@ Create a new file `src/backend/components/blocks/custom.py`:
 import torch
 import torch.nn as nn
 
+
 class CustomSEBlock(nn.Module):
     """Squeeze-and-Excitation Residual Block.
 
@@ -78,7 +79,9 @@ class CustomDiceLoss(nn.Module):
     def forward(self, inputs: torch.Tensor, targets: torch.Tensor) -> torch.Tensor:
         inputs = torch.sigmoid(inputs)
         intersection = (inputs * targets).sum()
-        dice = (2.0 * intersection + self.smooth) / (inputs.sum() + targets.sum() + self.smooth)
+        dice = (2.0 * intersection + self.smooth) / (
+            inputs.sum() + targets.sum() + self.smooth
+        )
         return 1.0 - dice
 ```
 
@@ -91,6 +94,7 @@ Add a unit test in `tests/unit/test_custom_block.py`:
 ```python
 import torch
 from src.backend.components.blocks.custom import CustomSEBlock
+
 
 def test_custom_se_block_shape() -> None:
     block = CustomSEBlock(in_channels=64)

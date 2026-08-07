@@ -4,6 +4,7 @@ from typing import Any
 
 try:
     import wandb  # type: ignore
+
     _WANDB_AVAILABLE = True
 except ImportError:  # pragma: no cover
     _WANDB_AVAILABLE = False
@@ -49,7 +50,9 @@ class WandbIntegration:
     def init(self) -> Any:
         """Initialize W&B run context."""
         if not self.is_available:
-            raise RuntimeError("wandb package is not installed. Install via `pip install wandb`.")
+            raise RuntimeError(
+                "wandb package is not installed. Install via `pip install wandb`."
+            )
         self.run = wandb.init(
             project=self.project,
             entity=self.entity,
@@ -69,7 +72,9 @@ class WandbIntegration:
         if self.is_available and self.run is not None:
             wandb.log(metrics, step=step)
 
-    def log_artifact(self, file_path: str, artifact_name: str, artifact_type: str = "model") -> None:
+    def log_artifact(
+        self, file_path: str, artifact_name: str, artifact_type: str = "model"
+    ) -> None:
         """Upload checkpoint file or artifact to W&B.
 
         Args:

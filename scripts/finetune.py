@@ -20,7 +20,9 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    print(f"[Finetune] Initializing transfer learning (package version: {tensoris.__version__})")
+    print(
+        f"[Finetune] Initializing transfer learning (package version: {tensoris.__version__})"
+    )
     print(f"[Finetune] Base backbone checkpoint: {args.base_checkpoint}")
     print("[Finetune] Fine-tuning completed successfully.")
 

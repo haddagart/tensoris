@@ -5,6 +5,7 @@ from typing import Any
 
 try:
     import ultralytics  # type: ignore
+
     _ULTRALYTICS_AVAILABLE = True
 except ImportError:  # pragma: no cover
     _ULTRALYTICS_AVAILABLE = False
@@ -35,11 +36,15 @@ class UltralyticsIntegration:
     def load_model(self) -> Any:
         """Instantiate Ultralytics YOLO model class."""
         if not self.is_available:
-            raise RuntimeError("ultralytics package is not installed. Install via `pip install ultralytics`.")
-        self.model = ultralytics.YOLO(self.model_name) # type: ignore
+            raise RuntimeError(
+                "ultralytics package is not installed. Install via `pip install ultralytics`."
+            )
+        self.model = ultralytics.YOLO(self.model_name)  # type: ignore
         return self.model
 
-    def train(self, data_yaml: str | Path, epochs: int = 50, imgsz: int = 640, batch: int = 16) -> Any:
+    def train(
+        self, data_yaml: str | Path, epochs: int = 50, imgsz: int = 640, batch: int = 16
+    ) -> Any:
         """Train YOLO model on dataset.
 
         Args:
@@ -53,7 +58,13 @@ class UltralyticsIntegration:
         """
         if self.model is None:
             self.load_model()
-        return self.model.train(data=str(data_yaml), epochs=epochs, imgsz=imgsz, batch=batch,) # type: ignore
+        assert self.model is not None
+        return self.model.train(
+            data=str(data_yaml),
+            epochs=epochs,
+            imgsz=imgsz,
+            batch=batch,
+        )  # type: ignore
 
     def export(self, format: str = "onnx") -> str:
         """Export trained YOLO model to deployment format (ONNX, TorchScript, Engine).
@@ -66,4 +77,5 @@ class UltralyticsIntegration:
         """
         if self.model is None:
             self.load_model()
-        return self.model.export(format=format) # type: ignore
+        assert self.model is not None
+        return self.model.export(format=format)  # type: ignore

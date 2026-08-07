@@ -31,7 +31,9 @@ class ContrastiveInfoNCELoss(nn.Module):
         super().__init__()
         self.temperature = temperature
 
-    def forward(self, image_features: torch.Tensor, text_features: torch.Tensor) -> torch.Tensor:
+    def forward(
+        self, image_features: torch.Tensor, text_features: torch.Tensor
+    ) -> torch.Tensor:
         """Compute InfoNCE contrastive alignment loss.
 
         Args:

@@ -5,6 +5,7 @@ from pathlib import Path
 
 try:
     import huggingface_hub  # type: ignore
+
     _HF_AVAILABLE = True
 except ImportError:  # pragma: no cover
     _HF_AVAILABLE = False
@@ -31,7 +32,12 @@ class HuggingFaceIntegration:
         """Check if huggingface_hub library is installed."""
         return _HF_AVAILABLE
 
-    def push_model(self, repo_id: str, local_dir: str | Path, commit_message: str = "Upload model checkpoint") -> str:
+    def push_model(
+        self,
+        repo_id: str,
+        local_dir: str | Path,
+        commit_message: str = "Upload model checkpoint",
+    ) -> str:
         """Upload local model directory or checkpoint files to Hugging Face Hub repository.
 
         Args:
@@ -54,7 +60,9 @@ class HuggingFaceIntegration:
             commit_message=commit_message,
         )
 
-    def download_file(self, repo_id: str, filename: str, local_dir: str | Path = "inputs/models") -> Path:
+    def download_file(
+        self, repo_id: str, filename: str, local_dir: str | Path = "inputs/models"
+    ) -> Path:
         """Download a single model weight file from Hugging Face Hub.
 
         Args:

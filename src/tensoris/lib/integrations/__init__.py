@@ -6,4 +6,10 @@ from .ultralytics import UltralyticsIntegration
 # pyrefly: ignore [missing-import]
 from .wandb import WandbIntegration
 
-__all__ = ["HuggingFaceIntegration", "KaggleIntegration", "RoboflowIntegration", "UltralyticsIntegration", "WandbIntegration",]
+__all__ = [
+    "HuggingFaceIntegration",
+    "KaggleIntegration",
+    "RoboflowIntegration",
+    "UltralyticsIntegration",
+    "WandbIntegration",
+]

@@ -42,7 +42,9 @@ class TransformerClassifier(nn.Module):
         self.block2 = TransformerEncoderBlock(d_model=hidden_dim, nhead=num_heads)
         self.classifier = nn.Linear(hidden_dim, num_classes)
 
-    def forward(self, input_ids: torch.Tensor, attention_mask: torch.Tensor | None = None) -> torch.Tensor:
+    def forward(
+        self, input_ids: torch.Tensor, attention_mask: torch.Tensor | None = None
+    ) -> torch.Tensor:
         """Execute forward pass sequence classification.
 
         Args:

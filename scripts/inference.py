@@ -20,7 +20,9 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    print(f"[Inference] Initializing prediction engine (package version: {tensoris.__version__})")
+    print(
+        f"[Inference] Initializing prediction engine (package version: {tensoris.__version__})"
+    )
     print(f"[Inference] Target input sample: {args.input_sample}")
     print("[Inference] Inference completed successfully.")
 
