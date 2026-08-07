@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "tensoris"
 dynamic = ["version"]
-description = "Add your description here"
+description = "Production-ready PyTorch library with automated CI/CD, multi-version docs, and PyPI packaging. Made for researchers and coders in mind first."
 readme = "README.md"
 requires-python = ">=3.11" # Update python version according to project's requirements
 dependencies = []
