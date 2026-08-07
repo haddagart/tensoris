@@ -8,18 +8,11 @@ All notable changes to **Tensoris** will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and [PEP 440](https://peps.python.org/pep-0440/).
 
-## [1.0.0] - Upcoming Official Stable Release
-
-### Planned
-- **First Official Production Release**: Promotion of `v1.0.0rc1` candidate to full production status on PyPI and GitHub Releases.
-- **Stable Branch Merge**: Automatic synchronization from `dev` and `working` into `main` and `release/v1`.
-
----
-
-## [1.0.0rc1] - 2026-08-07
+## [1.0.0] - 2026-08-07
 
 ### Added
-- **Interactive Release Script (`release.sh`)**: One-command release automation supporting PEP 440 versioning (`1.0.0a1`, `1.0.0b1`, `1.0.0rc1`, `1.0.0`), pre-commit verification checks, and major version branch management (`release/v1`).
+- **Official Production Release**: First production-ready release of Tensoris published to PyPI and GitHub Releases.
+- **Interactive Release Script (`release.sh`)**: One-command release automation supporting PEP 440 versioning, pre-commit verification checks, git merges, and major version branch management (`release/v1`).
 - **Master CI/CD Pipeline (`release.yml`)**: Unified 5-stage GitHub Actions workflow executing CI verification (`Ruff`, `Mypy`, `Pytest`), GitHub Release creation, PyPI Trusted Publishing, multi-version docs building (`mike`), and GitHub Pages deployment.
 - **Top-Level Package API Exports (`src/tensoris/__init__.py`)**: Implemented PEP 562 lazy exports allowing direct imports like `from tensoris import VisionBackbone, ModelTrainer, BaseDataset`.
 - **Expanded Unit Test Suite**: Added `tests/unit/test_models.py` and `tests/unit/test_backend.py` covering model output shapes, loss functions, evaluation metrics, and trainer execution loops.
@@ -29,6 +22,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - **Multi-Version Docs Selector (`mike`)**: Integrated `mike` version selector dropdown menu for seamless switching between `dev` and `latest` versions.
 - **Repository Rename & Branding**: Fully migrated all URLs, documentation headers, and citations from `haddag-dl-template-2` to `https://github.com/haddagart/tensoris`.
 - **Pre-Commit Auto-Formatting**: Integrated automatic code formatting (`ruff format`) and import sorting (`ruff check --fix`) directly into `release.sh`.
+
+---
+
+## [1.0.0rc1] - 2026-08-07
+
+### Added
+- Release Candidate dress rehearsal baseline for PyPI publishing, multi-version docs, and master pipeline validation.
 
 ---
 

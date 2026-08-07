@@ -205,7 +205,8 @@ if [[ "$IS_PRERELEASE" == true ]]; then
     git push origin dev working --tags -f
     git push origin "HEAD:${MAJOR_BRANCH}" -f
 
-    info "Deploying multi-version documentation for 'dev'..."
+    info "Fetching gh-pages and deploying multi-version documentation for 'dev'..."
+    git fetch origin gh-pages:gh-pages 2>/dev/null || true
     uv run mike deploy --push --update-aliases dev
 
 else
@@ -239,7 +240,8 @@ else
     git push origin main dev working --tags -f
     git push origin "main:${MAJOR_BRANCH}" -f
 
-    info "Deploying multi-version documentation for '${RAW_VER}' and setting 'latest' alias..."
+    info "Fetching gh-pages and deploying multi-version documentation for '${RAW_VER}' and setting 'latest' alias..."
+    git fetch origin gh-pages:gh-pages 2>/dev/null || true
     uv run mike deploy --push --update-aliases "${RAW_VER}" latest
     uv run mike set-default --push latest
 fi
