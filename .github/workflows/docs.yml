@@ -40,22 +40,29 @@ jobs:
         run: |
           uv sync --all-groups --all-extras
 
-      - name: Configure Git User
+      - name: Configure Git User & Fetch gh-pages
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages:gh-pages || true
 
       - name: Build & Deploy Branch (dev)
         if: github.ref == 'refs/heads/main'
         run: |
           uv run mike deploy --push --update-aliases dev
 
-      - name: Build & Deploy Tag Release (latest & vX.Y.Z)
+      - name: Build & Deploy Tag Release
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
           TAG_NAME=${GITHUB_REF#refs/tags/v}
-          uv run mike deploy --push --update-aliases $TAG_NAME latest
-          uv run mike set-default --push latest
+          if [[ "$TAG_NAME" =~ [a-zA-Z] ]]; then
+            echo "Deploying pre-release ${TAG_NAME} to 'dev' alias..."
+            uv run mike deploy --push --update-aliases dev
+          else
+            echo "Deploying stable release ${TAG_NAME} to 'latest' alias..."
+            uv run mike deploy --push --update-aliases $TAG_NAME latest
+            uv run mike set-default --push latest
+          fi
 
       - name: Build static site artifact for GitHub Pages
         run: |
