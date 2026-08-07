@@ -207,7 +207,7 @@ if [[ "$IS_PRERELEASE" == true ]]; then
 
     info "Fetching gh-pages and deploying multi-version documentation for 'dev'..."
     git fetch origin gh-pages:gh-pages 2>/dev/null || true
-    uv run mike deploy --push --update-aliases dev
+    uv run mike deploy --push --ignore-remote-status --update-aliases dev
 
 else
     # --- Stable Release Workflow (working -> main & dev) ---
@@ -242,7 +242,7 @@ else
 
     info "Fetching gh-pages and deploying multi-version documentation for '${RAW_VER}' and setting 'latest' alias..."
     git fetch origin gh-pages:gh-pages 2>/dev/null || true
-    uv run mike deploy --push --update-aliases "${RAW_VER}" latest
+    uv run mike deploy --push --ignore-remote-status --update-aliases "${RAW_VER}" latest
     uv run mike set-default --push latest
 fi
 
