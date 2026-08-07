@@ -1,7 +1,6 @@
 # Tensoris
 
-[![CI](https://github.com/haddagart/tensoris/actions/workflows/ci.yml/badge.svg)](https://github.com/haddagart/tensoris/actions/workflows/ci.yml)
-[![Docs](https://github.com/haddagart/tensoris/actions/workflows/docs.yml/badge.svg)](https://haddagart.github.io/tensoris/)
+[![Master Pipeline](https://github.com/haddagart/tensoris/actions/workflows/release.yml/badge.svg)](https://github.com/haddagart/tensoris/actions/workflows/release.yml)
 [![PyPI](https://img.shields.io/pypi/v/tensoris.svg)](https://pypi.org/project/tensoris/)
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 [![Code Style: Ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)

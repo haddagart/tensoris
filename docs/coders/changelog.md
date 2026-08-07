@@ -4,11 +4,35 @@ icon: material/history
 
 # Changelog
 
-All notable changes to this project boilerplate will be documented in this file.
+All notable changes to **Tensoris** will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and [PEP 440](https://peps.python.org/pep-0440/).
 
-## [1.0.0-beta] - 2026-08-07
+## [1.0.0] - Upcoming Official Stable Release
+
+### Planned
+- **First Official Production Release**: Promotion of `v1.0.0rc1` candidate to full production status on PyPI and GitHub Releases.
+- **Stable Branch Merge**: Automatic synchronization from `dev` and `working` into `main` and `release/v1`.
+
+---
+
+## [1.0.0rc1] - 2026-08-07
+
+### Added
+- **Interactive Release Script (`release.sh`)**: One-command release automation supporting PEP 440 versioning (`1.0.0a1`, `1.0.0b1`, `1.0.0rc1`, `1.0.0`), pre-commit verification checks, and major version branch management (`release/v1`).
+- **Master CI/CD Pipeline (`release.yml`)**: Unified 5-stage GitHub Actions workflow executing CI verification (`Ruff`, `Mypy`, `Pytest`), GitHub Release creation, PyPI Trusted Publishing, multi-version docs building (`mike`), and GitHub Pages deployment.
+- **Top-Level Package API Exports (`src/tensoris/__init__.py`)**: Implemented PEP 562 lazy exports allowing direct imports like `from tensoris import VisionBackbone, ModelTrainer, BaseDataset`.
+- **Expanded Unit Test Suite**: Added `tests/unit/test_models.py` and `tests/unit/test_backend.py` covering model output shapes, loss functions, evaluation metrics, and trainer execution loops.
+
+### Changed
+- **Enforced Workspace Branching Policy**: Standardized `working` branch as primary active development workspace, leaving `dev`, `main`, and `release/vX` strictly for release management.
+- **Multi-Version Docs Selector (`mike`)**: Integrated `mike` version selector dropdown menu for seamless switching between `dev` and `latest` versions.
+- **Repository Rename & Branding**: Fully migrated all URLs, documentation headers, and citations from `haddag-dl-template-2` to `https://github.com/haddagart/tensoris`.
+- **Pre-Commit Auto-Formatting**: Integrated automatic code formatting (`ruff format`) and import sorting (`ruff check --fix`) directly into `release.sh`.
+
+---
+
+## [1.0.0b1] - 2026-08-07
 
 ### Added
 - **PyPI Distribution Readiness**: Full PyPI compatibility and automated publication workflow configured via PyPI Trusted Publishers (OIDC) in `.github/workflows/release.yml`.
@@ -18,20 +42,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - **Package Renaming (`tensoris`)**: Renamed project and package from `dl`/`src` to `tensoris` using standard Python `src-layout` (`src/tensoris/`).
 - **Refactored Module Imports**: Updated all internal modules, model architectures (`backbone.py`, `vae.py`, `transformer.py`), CLI scripts (`train.py`, `inference.py`, `evaluate.py`, `finetune.py`), and diagnostic scripts to `import tensoris`.
 - **Unit Tests & Test Suites**: Updated `tests/unit/test_workspace.py` to test package initialization and version attributes of `tensoris`.
-- **Documentation Engine**: Updated `mkdocs.yml` site title to `Tensoris Documentation` and `docs/gen_ref_pages.py` API generator to parse `src/tensoris`.
 
 ---
 
-## [1.0.0-alpha] - 2026-08-05
+## [1.0.0a1] - 2026-08-05
 
-> [!WARNING]
-> **Alpha Release Disclaimer**: All implemented neural network modules, loss functions, metrics, and trainers in this initial `v1.0.0-alpha` release are provided in alpha stage for structural reference and rapid prototyping. They have not yet undergone rigorous production verification or empirical validation, and will be continuously hardened and stabilized in upcoming releases.
-
-### Added
-- **Modular Deep Learning Architecture**: Clean 3-tier decoupling across `layers`, `blocks`, `losses`, `metrics`, `trainers`, `models`, and `datasets`.
-- **Mathematical Docstrings & Formulations**: LaTeX equations rendering for `FocalLoss`, `DiceLoss`, `LabelSmoothingCrossEntropy`, `InfoNCELoss`, `PerceptualLoss`, `MeanIoU`, `TopKAccuracy`, `Perplexity`, and `FIDScore`.
-- **Interactive Mermaid Flowcharts**: Embedded flowcharts for `BaseModel` architecture and `ModelTrainer` execution loops.
-- **Third-Party Integrations**: Modules for Kaggle, Weights & Biases (W&B), Hugging Face Hub, Roboflow, and Ultralytics YOLO.
-- **Documentation Suite**: ProperDocs + MaterialX theme with auto-generated API tree, `git-revision-date-localized` timestamps, and `MathJax` rendering.
-- **AI Agent Skills**: Custom skills for template conversion, experiment tracking, ONNX/TorchScript export, and paper-to-code translation.
-- **Docker & Workstation Tooling**: NVIDIA GPU-accelerated container setups with hot-reloaded volume mounts.
+> [!NOTE]
+> Initial alpha release introducing modular architecture, loss functions, metrics, trainers, and containerization.
