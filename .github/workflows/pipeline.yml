@@ -1,0 +1,206 @@
+name: Master CI/CD & Release Pipeline
+
+on:
+  push:
+    branches: [ main, dev, working ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main, dev ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  # ============================================================================
+  # Stage 1: Continuous Integration (Lint, Format, Mypy, Unit Tests)
+  # ============================================================================
+  ci:
+    name: 1. CI (Lint, Format, Mypy, Pytest)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install uv toolchain
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "latest"
+          enable-cache: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          uv sync --all-groups --all-extras
+
+      - name: Run Ruff Linter
+        run: |
+          uv run ruff check .
+
+      - name: Check Formatting with Ruff
+        run: |
+          uv run ruff format --check .
+
+      - name: Run Mypy Type Check
+        run: |
+          uv run mypy src/tensoris
+
+      - name: Run Pytest Unit Tests
+        run: |
+          uv run pytest tests/unit
+
+  # ============================================================================
+  # Stage 2: Build & Release Package (GitHub Release + PyPI Publish)
+  # ============================================================================
+  release:
+    name: 2. Build & Release Package (PyPI & GitHub)
+    needs: ci
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install uv toolchain
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "latest"
+          enable-cache: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build dependencies
+        run: |
+          uv sync --all-groups --all-extras
+
+      - name: Build Wheel & Source Distribution
+        run: |
+          uv build
+
+      - name: Create GitHub Release & Attach Bundles
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*
+          generate_release_notes: true
+          draft: false
+          prerelease: ${{ contains(github.ref, 'a') || contains(github.ref, 'b') || contains(github.ref, 'rc') }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish Package to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: dist/
+          skip-existing: true
+
+  # ============================================================================
+  # Stage 3: Multi-Version Documentation Build (mike)
+  # ============================================================================
+  build-docs:
+    name: 3. Build Multi-Version Docs (mike)
+    needs: ci
+    if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev' || startsWith(github.ref, 'refs/tags/v')) && !cancelled()
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install uv toolchain
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "latest"
+          enable-cache: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          uv sync --all-groups --all-extras
+
+      - name: Configure Git User & Fetch gh-pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages:gh-pages || true
+
+      - name: Build & Deploy Branch (dev)
+        if: github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main'
+        run: |
+          uv run mike deploy --push --update-aliases dev
+
+      - name: Build & Deploy Tag Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          TAG_NAME=${GITHUB_REF#refs/tags/v}
+          if [[ "$TAG_NAME" =~ [a-zA-Z] ]]; then
+            echo "Deploying pre-release ${TAG_NAME} to 'dev' alias..."
+            uv run mike deploy --push --update-aliases dev
+          else
+            echo "Deploying stable release ${TAG_NAME} to 'latest' alias..."
+            uv run mike deploy --push --update-aliases $TAG_NAME latest
+            uv run mike set-default --push latest
+          fi
+
+      - name: Build static site artifact for GitHub Pages
+        run: |
+          uv run properdocs build --site-dir site
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  # ============================================================================
+  # Stage 4: Deploy Static Site to GitHub Pages
+  # ============================================================================
+  deploy-docs:
+    name: 4. Deploy to GitHub Pages
+    needs: build-docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  # ============================================================================
+  # Stage 5: Master Pipeline Summary & Audit Dashboard
+  # ============================================================================
+  pipeline-summary:
+    name: 5. Master Pipeline Summary Dashboard
+    needs: [ci, release, build-docs, deploy-docs]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Workflow Step Summary
+        run: |
+          echo "### 🚀 Tensoris Master CI/CD Pipeline Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Stage | Job Name | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "| :--- | :--- | :--- |" >> $GITHUB_STEP_SUMMARY
+          echo "| **1. CI** | Lint, Format, Mypy, Pytest | ${{ needs.ci.result == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| **2. Release** | GitHub Release & PyPI | ${{ needs.release.result == 'success' && '🚀 Published' || (needs.release.result == 'skipped' && '⏭️ Skipped (Not Tagged)' || '❌ Failed') }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| **3. Build Docs** | Mike Multi-Version Docs | ${{ needs.build-docs.result == 'success' && '📚 Built' || (needs.build-docs.result == 'skipped' && '⏭️ Skipped' || '❌ Failed') }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| **4. Deploy Docs** | GitHub Pages Deployment | ${{ needs.deploy-docs.result == 'success' && '🌐 Deployed' || (needs.deploy-docs.result == 'skipped' && '⏭️ Skipped' || '❌ Failed') }} |" >> $GITHUB_STEP_SUMMARY
