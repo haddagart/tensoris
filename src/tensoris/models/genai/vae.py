@@ -3,7 +3,7 @@
 import torch
 import torch.nn as nn
 
-from src.backend.components.blocks.genai import VAEDecoderBlock, VAEEncoderBlock
+from tensoris.backend.components.blocks.genai import VAEDecoderBlock, VAEEncoderBlock
 
 
 class VariationalAutoencoder(nn.Module):

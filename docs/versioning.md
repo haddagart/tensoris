@@ -15,9 +15,9 @@ Version strings are determined dynamically from **Git tags and branch commits** 
 ### Accessing Version in Code
 
 ```python
-import dl
+import tensoris
 
-print(dl.__version__)
+print(tensoris.__version__)
 # Output on tag v1.0.0:  "1.0.0"
 # Output on dev branch:  "1.0.1.dev3+gabc123"
 ```

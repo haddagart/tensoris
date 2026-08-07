@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-import dl
+import tensoris
 
 
 def main() -> None:
@@ -20,7 +20,7 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    print(f"[Inference] Initializing prediction engine (package version: {dl.__version__})")
+    print(f"[Inference] Initializing prediction engine (package version: {tensoris.__version__})")
     print(f"[Inference] Target input sample: {args.input_sample}")
     print("[Inference] Inference completed successfully.")
 

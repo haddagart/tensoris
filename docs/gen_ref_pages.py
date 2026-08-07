@@ -49,7 +49,7 @@ class NavNode:
         self.packages: dict[str, NavNode] = {}  # title -> NavNode
 
 
-src_dir = Path("src")
+src_dir = Path("src/tensoris")
 root = NavNode("API Reference")
 
 for path in sorted(src_dir.rglob("*.py")):

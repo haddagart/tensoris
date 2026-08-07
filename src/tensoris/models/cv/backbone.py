@@ -3,8 +3,8 @@
 import torch
 import torch.nn as nn
 
-from src.backend.components.blocks.cv import ResidualBlock
-from src.backend.components.layers.cv import ConvStem
+from tensoris.backend.components.blocks.cv import ResidualBlock
+from tensoris.backend.components.layers.cv import ConvStem
 
 
 class VisionBackbone(nn.Module):

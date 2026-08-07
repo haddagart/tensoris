@@ -3,7 +3,7 @@ requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [project]
-name = "dl" # Rename the project to your liking
+name = "tensoris"
 dynamic = ["version"]
 description = "Add your description here"
 readme = "README.md"
@@ -14,7 +14,7 @@ dependencies = []
 source = "vcs"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src"]
+packages = ["src/tensoris"]
 
 [project.optional-dependencies]
 dev = [
@@ -72,7 +72,7 @@ ignore = [
 ]
 
 [tool.ruff.lint.isort]
-known-first-party = ["src"]
+known-first-party = ["tensoris"]
 combine-as-imports = true
 
 [tool.ruff.format]

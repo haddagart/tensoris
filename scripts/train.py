@@ -7,7 +7,7 @@ from pathlib import Path
 # Ensure src package is importable
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-import dl
+import tensoris
 
 
 def main() -> None:
@@ -21,7 +21,7 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    print(f"[Train] Initializing workflow (package version: {dl.__version__})")
+    print(f"[Train] Initializing workflow (package version: {tensoris.__version__})")
     print(f"[Train] Loaded configuration file: {args.config}")
     print("[Train] Execution completed successfully.")
 

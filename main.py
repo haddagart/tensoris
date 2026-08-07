@@ -2,7 +2,7 @@
 
 import sys
 
-import dl
+import tensoris
 
 
 def main() -> None:
@@ -11,7 +11,7 @@ def main() -> None:
     print("      Deep Learning Project Workspace Diagnostic Check      ")
     print("=" * 60)
     print(f"Python Version : {sys.version.split()[0]} ({sys.executable})")
-    print(f"Package Version: {dl.__version__}")
+    print(f"Package Version: {tensoris.__version__}")
 
     try:
         import torch

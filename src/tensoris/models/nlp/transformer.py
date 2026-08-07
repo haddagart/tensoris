@@ -3,8 +3,8 @@
 import torch
 import torch.nn as nn
 
-from src.backend.components.blocks.nlp import TransformerEncoderBlock
-from src.backend.components.layers.nlp import PositionalEncoding
+from tensoris.backend.components.blocks.nlp import TransformerEncoderBlock
+from tensoris.backend.components.layers.nlp import PositionalEncoding
 
 
 class TransformerClassifier(nn.Module):
