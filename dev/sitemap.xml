@@ -1,288 +1,393 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/acknowledgements/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/acknowledgements/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/agent-skills/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/agent-skills/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/benchmarks/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/benchmarks/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/causes/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/causes/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/citation-contact/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/citation-contact/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/community/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/community/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/contributing/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/contributing/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/faq/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/faq/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/file-tree/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/file-tree/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/honorable-mentions/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/honorable-mentions/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/integrations/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/integrations/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/requirements/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/requirements/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/tldr/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/tldr/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/versioning/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/versioning/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/workflow-scripts/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/workflow-scripts/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/academics/ethics-deontology/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/academics/ethics-deontology/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/academics/references/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/academics/references/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/SUMMARY/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/SUMMARY/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/backend/components/blocks/cv/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/backend/components/blocks/genai/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/callbacks/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/backend/components/blocks/nlp/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/components/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/backend/components/layers/cv/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/components/blocks/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/backend/components/layers/nlp/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/components/blocks/cv/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/backend/losses/cv/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/components/blocks/genai/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/backend/losses/genai/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/components/blocks/nlp/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/backend/losses/nlp/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/components/layers/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/backend/metrics/cv/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/components/layers/cv/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/backend/metrics/genai/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/components/layers/nlp/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/backend/metrics/nlp/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/components/stages/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/backend/trainers/trainer/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/losses/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/data/dataset/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/losses/cv/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/lib/utils/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/losses/genai/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/lib/integrations/huggingface/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/losses/nlp/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/lib/integrations/kaggle/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/metrics/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/lib/integrations/roboflow/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/metrics/cv/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/lib/integrations/ultralytics/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/metrics/genai/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/lib/integrations/wandb/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/metrics/nlp/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/models/model/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/trainers/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/models/cv/backbone/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/backend/trainers/trainer/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/models/genai/vae/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/configs/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/api/models/nlp/transformer/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/data/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/coders/asking-question/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/data/dataset/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/coders/bug-report/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/dependencies/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/coders/changelog/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/lib/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/coders/conventions/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/lib/utils/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/coders/docs-issue/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/lib/core/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/coders/feature-request/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/lib/integrations/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/coders/license/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/lib/integrations/huggingface/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/coders/pull-request/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/lib/integrations/kaggle/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/coders/reproduction/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/lib/integrations/roboflow/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/coders/translations/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/lib/integrations/ultralytics/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/tutorials/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/lib/integrations/wandb/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/tutorials/custom-blocks-losses/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/lib/io/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/tutorials/gpu-docker/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/lib/utils/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/tutorials/platform-integrations/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/models/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://haddagart.github.io/haddag-dl-template-2/dev/tutorials/quickstart-pipeline/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <loc>https://haddagart.github.io/tensoris/dev/api/models/model/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/api/models/cv/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/api/models/cv/backbone/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/api/models/genai/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/api/models/genai/vae/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/api/models/nlp/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/api/models/nlp/transformer/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/coders/asking-question/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/coders/bug-report/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/coders/changelog/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/coders/conventions/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/coders/docs-issue/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/coders/feature-request/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/coders/license/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/coders/pull-request/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/coders/reproduction/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/coders/translations/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/tutorials/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/tutorials/custom-blocks-losses/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/tutorials/gpu-docker/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/tutorials/platform-integrations/</loc>
+        <lastmod>2026-08-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://haddagart.github.io/tensoris/dev/tutorials/quickstart-pipeline/</loc>
+        <lastmod>2026-08-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
 </urlset>
